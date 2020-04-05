@@ -1,7 +1,8 @@
 #!/usr/bin/env groovy
 
 pipeline {
-    agent { docker { image 'golang' } }
+    // agent { docker { image 'golang' } }
+    agent any
     stages {
         stage('build') {
             steps {
