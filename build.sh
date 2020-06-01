@@ -2,6 +2,7 @@
 
 echo "In build.sh"
 # This creates a go build named after this directory
-GOOS=linux go build .
+# CGO_ENABlED=0 will force go to build statically
+CGO_ENABLED=0 GOOS=linux go build .
 docker build -t tristanmacelli/summary .
 go clean 

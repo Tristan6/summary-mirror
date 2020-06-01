@@ -13,7 +13,7 @@ docker volume prune -f
 docker pull tristanmacelli/summary
 
 docker run -d \
--p 5050:5050 \
+-p 443:443 \
 --name summary \
 -v /etc/letsencrypt:/etc/letsencrypt:ro \
 -e TLSCERT=$TLSCERT \
